@@ -23,6 +23,7 @@ struct ContentView: View {
       VStack {
         
         Text("🎯🎯🎯\nPut the Bullseye as close as you can to".uppercased())
+          .foregroundColor(Color("TextColor"))
           .bold()
           .multilineTextAlignment(.center)
           .lineSpacing(4.0)
@@ -31,18 +32,21 @@ struct ContentView: View {
           .padding(.horizontal, 30)
         
         Text(String(game.target))
+          .foregroundColor(Color("TextColor"))
           .fontWeight(.black)
           .font(.largeTitle)
           .kerning(-1.0)
         
         HStack {
           Text("1")
+            .foregroundColor(Color("TextColor"))
             .bold()
           
           Slider(value: $sliderValue,
                  in: 1.0...100.0)
           
           Text("100")
+            .foregroundColor(Color("TextColor"))
             .bold()
         }
         .padding()
