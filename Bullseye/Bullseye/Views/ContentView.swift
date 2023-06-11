@@ -88,6 +88,10 @@ struct HitMeButton: View {
       }
       
     )
+    .overlay(
+      RoundedRectangle(cornerRadius: 21)
+        .stroke(Color.white, lineWidth: 2.0 )
+    )
     .foregroundColor(.white)
     .cornerRadius(21.0)
     .bold()
@@ -111,6 +115,8 @@ struct HitMeButton: View {
   }
 }
 
+//list.dash
+//arrow.counterclockwise
 
 struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
