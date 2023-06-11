@@ -12,6 +12,7 @@ struct InstructionText: View {
   var text: String
   
   var body: some View {
+    
     Text(text.uppercased())
       .foregroundColor(Color("TextColor"))
       .bold()
@@ -47,12 +48,26 @@ struct SliderLabelText: View {
   }
 }
 
+struct LabelTextView: View {
+  
+  var title: String
+  
+  var body: some View {
+    Text(title.uppercased())
+      .foregroundColor(Color("TextColor"))
+      .font(.caption)
+      .bold()
+      .kerning(1.5)
+  }
+}
+
 struct TextViews_Previews: PreviewProvider {
   static var previews: some View {
     VStack {
       InstructionText(text: "Instructions")
       BigNumberText(text: String(56))
       SliderLabelText(text: "1")
+      LabelTextView(title: "hello")
     }
   }
 }

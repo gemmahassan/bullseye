@@ -16,6 +16,7 @@
 		081CD45A2A325B3A0051C8A1 /* TextViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081CD4592A325B3A0051C8A1 /* TextViews.swift */; };
 		081CD4622A365A8F0051C8A1 /* Shapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081CD4612A365A8F0051C8A1 /* Shapes.swift */; };
 		081CD4642A365D4B0051C8A1 /* RoundedViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081CD4632A365D4B0051C8A1 /* RoundedViews.swift */; };
+		081CD4662A3662B00051C8A1 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081CD4652A3662B00051C8A1 /* BackgroundView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		081CD4592A325B3A0051C8A1 /* TextViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViews.swift; sourceTree = "<group>"; };
 		081CD4612A365A8F0051C8A1 /* Shapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shapes.swift; sourceTree = "<group>"; };
 		081CD4632A365D4B0051C8A1 /* RoundedViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedViews.swift; sourceTree = "<group>"; };
+		081CD4652A3662B00051C8A1 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				081CD4592A325B3A0051C8A1 /* TextViews.swift */,
 				081CD4612A365A8F0051C8A1 /* Shapes.swift */,
 				081CD4632A365D4B0051C8A1 /* RoundedViews.swift */,
+				081CD4652A3662B00051C8A1 /* BackgroundView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 				081CD4642A365D4B0051C8A1 /* RoundedViews.swift in Sources */,
 				081CD43B2A1D455C0051C8A1 /* ContentView.swift in Sources */,
 				081CD45A2A325B3A0051C8A1 /* TextViews.swift in Sources */,
+				081CD4662A3662B00051C8A1 /* BackgroundView.swift in Sources */,
 				081CD4622A365A8F0051C8A1 /* Shapes.swift in Sources */,
 				081CD44B2A1EAB590051C8A1 /* Game.swift in Sources */,
 				081CD4392A1D455C0051C8A1 /* BullseyeApp.swift in Sources */,

@@ -17,8 +17,7 @@ struct ContentView: View {
     
     ZStack {
       
-      Color("BackgroundColor")
-        .edgesIgnoringSafeArea(.all)
+      BackgroundView(game: $game)
       
       VStack {
         
@@ -59,11 +58,13 @@ struct SliderView: View {
     HStack {
       
       SliderLabelText(text: "1")
+        .frame(width: 35.0)
       
       Slider(value: $sliderValue,
              in: 1.0...100.0)
       
       SliderLabelText(text: "100")
+        .frame(width: 35.0)
     }
     .padding()
   }
@@ -74,7 +75,7 @@ struct HitMeButton: View {
   @Binding var alertIsVisible: Bool
   @Binding var sliderValue: Double
   @Binding var game: Game
-
+  
   var body: some View {
     
     Button("Hit me".uppercased()) {
@@ -114,9 +115,6 @@ struct HitMeButton: View {
     )
   }
 }
-
-//list.dash
-//arrow.counterclockwise
 
 struct ContentView_Previews: PreviewProvider {
   static var previews: some View {

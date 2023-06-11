@@ -31,7 +31,6 @@ struct RoundedImageViewFilled: View {
   var body: some View {
     
     Image(systemName: systemName)
-      
       .font(.title)
       .frame(width: 56.0, height: 56.0)
       .foregroundColor(Color("ButtonFilledTextColor"))
@@ -42,15 +41,36 @@ struct RoundedImageViewFilled: View {
   }
 }
 
+struct RoundedRectTextView: View {
+  
+  var text: String
+  
+  var body: some View {
+    
+    Text(text)
+      .font(.title3)
+      .bold()
+      .kerning(-0.2)
+      .foregroundColor(Color("TextColor"))
+      .frame(width: 68.0, height: 56.0)
+      .overlay(
+        RoundedRectangle(cornerRadius: 21.0)
+          .strokeBorder(Color("ButtonStrokeColor"), lineWidth: 2.0)
+      )
+  }
+}
+
 struct PreviewView: View {
   
   var body: some View {
     
-    VStack(spacing:10) {
+    VStack(spacing: 10) {
       
       RoundedImageViewStroked(systemName: "list.dash")
       
       RoundedImageViewFilled(systemName: "arrow.counterclockwise")
+    
+      RoundedRectTextView(text: "22")
     }
   }
 }
