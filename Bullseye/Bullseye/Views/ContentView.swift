@@ -22,14 +22,26 @@ struct ContentView: View {
       VStack {
         
         InstructionsView(game: $game)
-          .padding(.bottom, 100)
+          .padding(.bottom, alertIsVisible ? 0 : 100)
         
-        HitMeButton(alertIsVisible: $alertIsVisible,
-                    sliderValue: $sliderValue,
-                    game: $game)
+        if alertIsVisible {
+          PointsView(alertIsVisible: $alertIsVisible,
+                     sliderValue: $sliderValue,
+                     game: $game)
+          .transition(.scale)
+        } else {
+          HitMeButton(alertIsVisible: $alertIsVisible,
+                      sliderValue: $sliderValue,
+                      game: $game)
+          .transition(.scale)
+        }
       }
       
-      SliderView(sliderValue: $sliderValue)
+      if !alertIsVisible {
+        SliderView(sliderValue: $sliderValue)
+          .zIndex(1)
+          .transition(.scale)
+      }
     }
   }
 }
@@ -80,7 +92,9 @@ struct HitMeButton: View {
   var body: some View {
     
     Button("Hit me".uppercased()) {
-      alertIsVisible = true
+      withAnimation {
+        alertIsVisible = true
+      }
     }
     .padding(20.0)
     .background(
@@ -91,29 +105,13 @@ struct HitMeButton: View {
       
     )
     .overlay(
-      RoundedRectangle(cornerRadius: 21)
-        .stroke(Color.white, lineWidth: 2.0 )
+      RoundedRectangle(cornerRadius: Constants.General.roundedRectCornerRadius)
+        .stroke(Color.white, lineWidth: Constants.General.strokeWidth)
     )
     .foregroundColor(.white)
-    .cornerRadius(21.0)
+    .cornerRadius(Constants.General.roundedRectCornerRadius)
     .bold()
     .font(.title3)
-    .alert(
-      "Hello there!",
-      isPresented: $alertIsVisible,
-      actions: {
-        Button("Awesome") {
-          game.startNewRound(points: game.points(sliderValue: Int(sliderValue)))
-        }
-      },
-      message: {
-        let roundedValue = Int(sliderValue.rounded())
-        Text("""
-              The slider's value is \(roundedValue).
-              You scored \(game.points(sliderValue: roundedValue)) this round.
-             """)
-      }
-    )
   }
 }
 

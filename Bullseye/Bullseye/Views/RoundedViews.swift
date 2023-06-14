@@ -16,10 +16,10 @@ struct RoundedImageViewStroked: View {
     Image(systemName: systemName)
       .font(.title)
       .foregroundColor(Color("TextColor"))
-      .frame(width: 56.0, height: 56.0)
+      .frame(width: Constants.General.roundedViewLength, height: Constants.General.roundedViewLength)
       .overlay(
         Circle()
-          .strokeBorder(Color("ButtonStrokeColor"), lineWidth: 2.0)
+          .strokeBorder(Color("ButtonStrokeColor"), lineWidth: Constants.General.strokeWidth)
       )
   }
 }
@@ -32,7 +32,7 @@ struct RoundedImageViewFilled: View {
     
     Image(systemName: systemName)
       .font(.title)
-      .frame(width: 56.0, height: 56.0)
+      .frame(width: Constants.General.roundedViewLength, height: Constants.General.roundedViewLength)
       .foregroundColor(Color("ButtonFilledTextColor"))
       .background(
         Circle()
@@ -52,10 +52,10 @@ struct RoundedRectTextView: View {
       .bold()
       .kerning(-0.2)
       .foregroundColor(Color("TextColor"))
-      .frame(width: 68.0, height: 56.0)
+      .frame(width: Constants.General.roundedRectViewWidth, height: Constants.General.roundedRectViewHeight)
       .overlay(
-        RoundedRectangle(cornerRadius: 21.0)
-          .strokeBorder(Color("ButtonStrokeColor"), lineWidth: 2.0)
+        RoundedRectangle(cornerRadius: Constants.General.roundedRectCornerRadius)
+          .strokeBorder(Color("ButtonStrokeColor"), lineWidth: Constants.General.strokeWidth)
       )
   }
 }
