@@ -28,6 +28,7 @@ struct BigNumberText: View {
   var text: String
   
   var body: some View {
+    
     Text(text)
       .foregroundColor(Color("TextColor"))
       .fontWeight(.black)
@@ -53,11 +54,45 @@ struct LabelTextView: View {
   var title: String
   
   var body: some View {
+    
     Text(title.uppercased())
       .foregroundColor(Color("TextColor"))
       .font(.caption)
       .bold()
       .kerning(1.5)
+  }
+}
+
+struct BodyText: View {
+  
+  var text: String
+  
+  var body: some View {
+    
+    Text(text)
+      .font(.subheadline)
+      .fontWeight(.semibold)
+      .multilineTextAlignment(.center)
+      .foregroundColor(Color("TextColor"))
+      .lineSpacing(12)
+  }
+}
+
+struct ButtonText: View {
+  
+  var text: String
+  
+  var body: some View {
+    
+    Text(text)
+      .bold()
+      .padding()
+      .frame(maxWidth: .infinity)
+      .background(
+        Color.accentColor
+      )
+      .foregroundColor(Color.white)
+      .cornerRadius(12)
   }
 }
 
@@ -68,6 +103,9 @@ struct TextViews_Previews: PreviewProvider {
       BigNumberText(text: String(56))
       SliderLabelText(text: "1")
       LabelTextView(title: "hello")
+      BodyText(text: "You scored 200 points\n🤯🤯🤯")
+      ButtonText(text: "Start New Round")
     }
+    .padding()
   }
 }
