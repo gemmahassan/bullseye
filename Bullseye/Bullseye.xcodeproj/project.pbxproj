@@ -19,6 +19,7 @@
 		081CD4662A3662B00051C8A1 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081CD4652A3662B00051C8A1 /* BackgroundView.swift */; };
 		081CD4682A39B0680051C8A1 /* PointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081CD4672A39B0680051C8A1 /* PointsView.swift */; };
 		081CD46A2A3A4D370051C8A1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081CD4692A3A4D370051C8A1 /* Constants.swift */; };
+		081CD46C2A3A52800051C8A1 /* LeaderboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081CD46B2A3A52800051C8A1 /* LeaderboardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		081CD4652A3662B00051C8A1 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		081CD4672A39B0680051C8A1 /* PointsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsView.swift; sourceTree = "<group>"; };
 		081CD4692A3A4D370051C8A1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		081CD46B2A3A52800051C8A1 /* LeaderboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				081CD4632A365D4B0051C8A1 /* RoundedViews.swift */,
 				081CD4652A3662B00051C8A1 /* BackgroundView.swift */,
 				081CD4672A39B0680051C8A1 /* PointsView.swift */,
+				081CD46B2A3A52800051C8A1 /* LeaderboardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				081CD4642A365D4B0051C8A1 /* RoundedViews.swift in Sources */,
+				081CD46C2A3A52800051C8A1 /* LeaderboardView.swift in Sources */,
 				081CD43B2A1D455C0051C8A1 /* ContentView.swift in Sources */,
 				081CD45A2A325B3A0051C8A1 /* TextViews.swift in Sources */,
 				081CD4682A39B0680051C8A1 /* PointsView.swift in Sources */,
